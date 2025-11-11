@@ -1,13 +1,13 @@
-package main
+package structs
 
 // Struct represents a railway operator
-type operator struct {
+type Operator struct {
 	Code	string	`json:"operatorCode"`
 	Name	string	`json:"operatorName"`
 }
 
 // Struct represents a railway route
-type route struct {
+type Route struct {
 	Identifier	string	`json:"identifier"`
 	Name		string	`json:"routeName"`
 	Beginning	string	`json:"beginning"`
@@ -15,7 +15,7 @@ type route struct {
 }
 
 // Represents the stops on a given route
-type routeStops struct {
+type RouteStops struct {
 	Identifier	string	`json:"identifier`
 	Station		string	`json:"Station"`
 	Position	int	`json:"position"`
@@ -23,7 +23,7 @@ type routeStops struct {
 }
 
 // Struct represents a train station.
-type station struct {
+type Station struct {
     Code        string  `json:"code"`
     Name        string  `json:"name"`
     Operator    string  `json:"operator"`
@@ -31,7 +31,7 @@ type station struct {
 }
 
 // Struct represents an exit at a station
-type exit struct {
+type Exit struct {
 	Platform	int		`json:"platform"`
 	Carriage	int		`json:"carriage"`
 	Door		string	`json:"door"`
