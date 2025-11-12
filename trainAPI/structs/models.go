@@ -12,6 +12,7 @@ type Route struct {
 	Name		string	`json:"routeName"`
 	Beginning	string	`json:"beginning"`
 	End			string	`json:"end"`
+	Operator	string	`json:"operator"`
 }
 
 // Represents the stops on a given route
@@ -32,6 +33,7 @@ type Station struct {
 
 // Struct represents an exit at a station
 type Exit struct {
+	Station		string	`json:"station"`
 	Platform	int		`json:"platform"`
 	Carriage	int		`json:"carriage"`
 	Door		string	`json:"door"`

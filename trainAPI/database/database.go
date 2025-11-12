@@ -66,7 +66,7 @@ func GetStationByID(code string) (Station, error) {
         return station, fmt.Errorf("Database not connected")
     }
 
-	err := DB.QueryRow("SELECT Code, Name, Operator, Platforms FROM Station WHERE Code = ?", code).
+	err := DB.QueryRow("SELECT Code, Name, Operator, Platforms FROM Stations WHERE Code = ?", code).
 		Scan(&station.Code, &station.Name, &station.Operator, &station.Platforms)
 
 	if err == sql.ErrNoRows {
